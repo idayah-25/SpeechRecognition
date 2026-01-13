@@ -1,8 +1,14 @@
 import streamlit as st
-import speech_recognition as sr
+#import speech_recognition as sr
 import pyttsx3
 import time
 import pandas as pd
+
+try:
+    import speech_recognition as sr
+except ImportError:
+    sr = None
+
 
 def transcribe_speech():
     # Initialize recognizer class
